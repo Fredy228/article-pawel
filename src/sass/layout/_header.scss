@@ -1,1 +1,38 @@
+.header {
+    background-color: #2F2FA2;
+    color: #F64C72;
+    margin-bottom: 15px;
 
+    &__inner {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__logo {
+        font-family: 'Rubik 80s Fade', cursive;
+        font-size: 18px;
+        padding: 10px 0;
+        @media screen and (min-width: 768px) {
+            font-size: 24px; 
+        }
+    }
+
+    &__logo-span {
+        color: #99738E;
+    }
+    &__sort {
+
+    }
+
+    &__selected {
+        color: white;
+        background-color: #F64C72;
+        font-family: 'Raleway', sans-serif;
+        font-size: 14px;
+        border-radius: 5px;
+        @media screen and (min-width: 768px) {
+            font-size: 16px; 
+        }
+    }
+    
+}
