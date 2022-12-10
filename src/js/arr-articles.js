@@ -1,4 +1,4 @@
-export default articleArray = [
+export const articleArray = [
   {
     id: 1,
     title: `Чому Україна втратила свою суб'єктивність у 2004 році? Які перспективи Пост-воєнної Пошти України?`,

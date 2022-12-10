@@ -1,4 +1,4 @@
-import articleArray from './arr-articles';
+import { articleArray } from './arr-articles';
 import { refs } from './refs';
 import { markupArticlesModal } from './murkap-artc-modal';
 
