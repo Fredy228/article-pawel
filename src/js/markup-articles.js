@@ -4,7 +4,7 @@ export function markupArticlesCards(array) {
   refs.articleBox.innerHTML = '';
   const markup = [];
   array.map(item => {
-    markup.push(`<section class="article__section">
+    markup.push(`<section class="article__section" data-id="${item.id}">
     <h2 class="article__title">
       <svg class="article__icon" width="15" height="15">
         <use href="#icon-book"></use>
@@ -15,7 +15,7 @@ export function markupArticlesCards(array) {
       <svg class="article__icon" width="15" height="15">
         <use href="#icon-leaf"></use>
       </svg>
-      ${item.text}
+      ${item.thesis}
     </p>
   </section>`);
   });

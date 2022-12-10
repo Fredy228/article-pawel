@@ -1,0 +1,107 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+    padding: 15px;
+    transition: opacity 250ms linear, visability 250ms linear;
+    z-index: 1000 ;
+    &.is-hidden {
+        visibility: hidden;
+        pointer-events: none;
+        opacity: 0;
+    }
+}
+
+.modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+
+    @media screen and (min-width: 1280px) {
+        width: 1280px;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    &__btn-close {
+        position: relative;
+        content: "";
+        display: block;
+        width: 20px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: black;
+        transform: rotate(45deg);
+        transition: transform 250ms linear;
+    }
+    
+    &__btn-close::after {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: black;
+        transform: rotate(90deg);
+        top: 0;
+        left: 0;
+        transition: transform 250ms linear;
+    }
+    
+    &__btn:hover .modal__btn-close {
+        animation-duration:1000ms;
+        animation-name: rotate-1;
+    }
+      
+      @keyframes rotate-1 {
+    
+    
+        0% {
+            transform: rotate(45deg);
+        }
+        25% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(180deg);
+        }
+        100% {
+            transform: rotate(46deg);
+        }
+      }
+}
+
+.modal__article {
+    overflow-y: scroll;
+    height: 100%;
+}
