@@ -1,5 +1,5 @@
 import { markupArticlesCards } from './markup-articles';
-import articleArray from './arr-articles';
+import { articleArray } from './arr-articles';
 const articleArr = [...articleArray].reverse();
 
 export function articlesSort(event) {
