@@ -50,35 +50,37 @@
         width: 30px;
         height: 30px;
         background-color: #fff;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border: 1px solid rgba(0, 0, 0, 0.35);
     }
 
-    &__btn-close {
-        position: relative;
+    &__btn::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
         content: "";
         display: block;
         width: 20px;
         height: 2px;
         border-radius: 1px;
         background-color: black;
-        transform: rotate(45deg);
+        transform: translate(-50%, -50%) rotate(-45deg);
         transition: transform 250ms linear;
     }
     
-    &__btn-close::after {
+    &__btn::after {
         position: absolute;
         content: "";
         width: 20px;
         height: 2px;
         border-radius: 1px;
         background-color: black;
-        transform: rotate(90deg);
-        top: 0;
-        left: 0;
+        transform: translate(-50%, -50%) rotate(45deg);
+        top: 50%;
+        left: 50%;
         transition: transform 250ms linear;
     }
     
-    &__btn:hover .modal__btn-close {
+    &__btn:hover {
         animation-duration:1000ms;
         animation-name: rotate-1;
     }
