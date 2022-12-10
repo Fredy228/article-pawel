@@ -1,4 +1,4 @@
-import articleArray from './js/arr-articles';
+import { articleArray } from './js/arr-articles';
 import { markupArticlesCards } from './js/markup-articles';
 import { refs } from './js/refs';
 import { articlesSort } from './js/sort-articles';
