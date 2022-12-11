@@ -1,7 +1,8 @@
 .header {
-    background-color: #2F2FA2;
-    color: #F64C72;
-    margin-bottom: 15px;
+    // background-color: #05386B;
+    // background-color: #2F2FA2;
+    // margin-bottom: 15px;
+    // border-bottom: 2px solid #05386B;
 
     &__inner {
         display: flex;
@@ -12,13 +13,15 @@
         font-family: 'Rubik 80s Fade', cursive;
         font-size: 18px;
         padding: 10px 0;
+        color: #C3073F;
+        cursor: default;
         @media screen and (min-width: 768px) {
             font-size: 24px; 
         }
     }
 
     &__logo-span {
-        color: #99738E;
+        
     }
     &__sort {
 
@@ -26,13 +29,19 @@
 
     &__selected {
         color: white;
-        background-color: #F64C72;
+        background-color: transparent;
+        border: 2px solid #C3073F;
         font-family: 'Raleway', sans-serif;
         font-size: 14px;
         border-radius: 5px;
+        outline: none;
         @media screen and (min-width: 768px) {
             font-size: 16px; 
         }
+    }
+    &__selected:hover {
+        background-color: #C3073F;
+        cursor: pointer;
     }
     
 }

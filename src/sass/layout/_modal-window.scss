@@ -105,12 +105,15 @@
       &__article {
         overflow-y: scroll;
         height: 100%;
+        @media screen and (min-width: 400px){
+            padding: 10px;        
+        }
     }
 
     &__title {
         font-size: 19px;
         margin-bottom: 5px;
-        
+
         @media screen and (min-width: 768px) {
             font-size: 22px;
         }
@@ -123,6 +126,7 @@
         text-indent: 1.5em;
         margin-bottom: 2px;
         font-size: 17px;
+        
 
         @media screen and (min-width: 768px) {
             font-size: 19px;

@@ -8,17 +8,14 @@
     &__section {
         padding: 10px;
         border-radius: 10px;
-        border: 2px solid #F64C72;
-        margin-bottom: 10px;
-        transition-property: background-color, color;
+        background-color: white;
+        margin-bottom: 15px;
+        border: 2px solid transparent;
+        
+        transition-property: box-shadow, border;
         transition-duration: 250ms;
         transition-timing-function: linear;
 
-        @media screen and (max-width: 767px) {
-            margin: 0 auto calc(10px / 2) auto;
-            flex-basis: calc(100% / 1 - 10px);
-        }
-    
         @media screen and (min-width: 768px) {
             margin: calc(10px / 2);
             flex-basis: calc(100% / 2 - 10px);
@@ -31,9 +28,9 @@
     }
     
     &__section:hover {
-        background-color: #553D67;
         cursor: pointer;
-        color: white;
+        border: 2px solid #C3073F;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     }
     &__title {
         font-size: 16px;
@@ -43,7 +40,7 @@
         transition: fill 250ms linear;
     }
     &__section:hover &__icon {
-        fill: white;
+        fill: #C3073F;
     }
      
     &__text {
