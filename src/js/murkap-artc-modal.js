@@ -20,18 +20,18 @@ export function markupArticlesModal(obj) {
   });
   refs.modalArticle.id = `${obj.id}`;
   markup.push(`<div id="disqus_thread"></div>
-  <script>
-      var disqus_config = function () {
-      this.page.url = "fredy228.github.io/article-pawel/";  
-      this.page.identifier = #${obj.id};
-      };
-      (function() {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://articles-pawel.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-      })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>`);
+    <script>
+        var disqus_config = function () {
+        this.page.url = "https://fredy228.github.io/article-pawel/";
+        this.page.identifier = #${obj.id};
+        };
+        (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://articles-pawel.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>`);
   refs.modalArticle.insertAdjacentHTML('beforeend', markup.join(''));
 }
