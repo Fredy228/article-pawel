@@ -1,7 +1,6 @@
 import { refs } from './refs';
 
 export function markupArticlesModal(obj) {
-  window.scrollBy(0, 0);
   refs.modalArticle.innerHTML = '';
   const markup = [];
   markup.push(`<h2 class="modal__title">
@@ -21,4 +20,5 @@ export function markupArticlesModal(obj) {
   });
   refs.modalArticle.id = `${obj.id}`;
   refs.modalArticle.insertAdjacentHTML('beforeend', markup.join(''));
+  refs.modalArticle.scrollTo(0, 0);
 }
